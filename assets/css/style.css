@@ -1,0 +1,389 @@
+/* Reset e fontes */
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #263138;
+  --color-secondary: #ff725e;
+  --color-background-header: #ff9a6c;
+  --color-obc: #f64348;
+  --color-white: #ffffff;
+}
+
+body {
+  color: var(--color-primary);
+}
+
+.petlife {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+/* Botão fixo */
+.btn-fixed {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  visibility: hidden;
+}
+
+.btn-fixed img {
+  rotate: 180deg;
+}
+
+.btn-fixed.visible {
+  visibility: visible;
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--color-background-header);
+  padding: 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header a {
+  color: var(--color-white);
+  font-weight: 600;
+  padding: 8px 0;
+  text-decoration: none;
+  gap: 16px;
+}
+
+header a:hover {
+  color: var(--color-primary);
+}
+
+header nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Seção inicial */
+#inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+  padding: 24px;
+  position: relative;
+}
+
+#inicio .img {
+  width: 280px;
+  height: auto;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+
+.paragrafo {
+  line-height: 150%;
+  margin-bottom: 24px;
+}
+
+.button {
+  width: 280px;
+  background-color: var(--color-secondary);
+  border-radius: 8px;
+  color: var(--color-white);
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: 1.2s;
+}
+
+.button:hover {
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+}
+
+.button,
+.button-transparent {
+  display: block;
+  margin: auto;
+}
+
+.button-transparent {
+  text-align: center;
+  width: 280px;
+  background-color: transparent;
+  color: var(--color-secondary);
+  margin-top: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-underline-offset: 4px;
+  transition: all ease 1.3s;
+}
+
+.button-transparent:hover {
+  background-color: var(--color-background-header);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.absolute {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -10;
+}
+
+#clinica .img {
+  width: 280px;
+  height: auto;
+}
+
+#clinica,
+#duvidas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 48px 24px;
+}
+
+#clinica li {
+  margin-bottom: 16px;
+  margin-left: 24px;
+}
+
+#farmacia {
+  padding: 48px 24px;
+  text-align: center;
+}
+
+#farmacia .img {
+  width: 280px;
+  height: auto;
+  margin: 48px auto;
+}
+
+#farmacia .paragrafo {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+#duvidas div {
+  max-width: 800px;
+}
+
+#duvidas .img {
+  width: 280px;
+  height: auto;
+}
+
+.duvida {
+  position: relative;
+  width: 100%;
+}
+
+.duvida h3 {
+  border: 2px solid var(--color-secondary);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 24px;
+}
+
+.duvida img {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transition: all ease 0.2s;
+}
+
+.duvida.ativa img {
+  transform: rotate(180deg);
+}
+
+.duvida .paragrafo {
+  border-right: 1.008px solid var(--color-secondary);
+  border-bottom: 1.008px solid var(--color-secondary);
+  border-left: 1.008px solid var(--color-secondary);
+  border-radius: 0 0 8px 8px;
+  margin-top: -8px;
+  padding: 0 24px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all ease 0.2s;
+}
+
+.duvida.ativa .paragrafo {
+  height: fit-content;
+  opacity: 1;
+  padding: 24px;
+}
+
+footer {
+  background-color: rgba(255, 151, 107, 0.251);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 48px 24px;
+  align-items: center;
+}
+
+footer img,
+footer .titulo {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+footer nav a {
+  display: block;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+footer nav a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+footer p {
+  margin-bottom: 16px;
+  max-width: 350px;
+}
+
+footer p a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.copyright {
+  background-color: #263138;
+  color: var(--color-white);
+  padding: 24px;
+  text-align: center;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.copyright a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+#obc {
+  color: var(--color-white);
+}
+
+#obc:hover {
+  color: var(--color-obc);
+}
+
+@media (min-width: 660px) {
+  .btn-fixed {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    visibility: hidden;
+  }
+
+  .btn-fixed img {
+    rotate: 0deg;
+  }
+}
+
+/* Desktop - min-width: 950px */
+@media (min-width: 950px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 80px;
+  }
+
+  header a {
+    padding: 0 32px;
+  }
+
+  #inicio {
+    flex-direction: row;
+    align-items: center;
+    padding: 24px 80px 32px;
+  }
+
+  #inicio .img {
+    width: 500px;
+    height: 580px;
+  }
+
+  .button,
+  .button-transparent {
+    display: inline-block;
+    width: auto;
+  }
+
+  #clinica .img {
+    width: 480px;
+    height: 480px;
+  }
+
+  #clinica,
+  #duvidas {
+    flex-direction: row;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+  }
+
+  #farmacia {
+    padding: 64px 80px;
+  }
+
+  #farmacia .img {
+    width: 645px;
+    height: 430px;
+  }
+
+  #duvidas .img {
+    width: 400px;
+    height: 400px;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 64px 80px;
+  }
+}
+
+@media (min-width: 1140px) {
+  #inicio {
+    text-align: start;
+  }
+
+  .btn-fixed {
+    bottom: 24px;
+    right: 24px;
+  }
+
+  #duvidas .img {
+    width: 540px;
+    height: 540px;
+  }
+}
