@@ -29,7 +29,7 @@ Este projeto simula a página oficial de uma clínica veterinária chamada **Pet
 ## 💻 Responsividade
 O layout foi pensado de forma **mobile-first**, adaptando-se bem a diferentes tamanhos de tela.
 
-[ScreenShot](./assets/img/ScreenShot.png)
+![ScreenShot](./assets/img/ScreenShot.png)
 
 ## 🔗 Links
 
